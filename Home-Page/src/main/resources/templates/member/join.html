@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Join Page</title>
+</head>
+<body>
+	<h1>Join Page</h1>
+	
+ 	<form action="join" method="post" th:object="${join}">
+ 		<ul>
+			<li><input type="text" class="input" th:field="*{member_id}" autocomplete="off" placeholder="ID"></li>
+			<li><input type="password" class="input" th:field="*{member_password}" autocomplete="off" placeholder="Password"></li>
+			<li><input type="text" class="input" th:field="*{member_name}" autocomplete="off" placeholder="Username"></li>
+			<li><input type="text" class="input" th:field="*{member_nickname}" autocomplete="off" placeholder="Nickname"></li>
+			<li><input type="date" class="input" th:field="*{member_birth}" autocomplete="off" placeholder="Birth"></li>
+			<li><input type="text" class="input" th:field="*{member_email}" autocomplete="off"	placeholder="Email"></li>
+        	<li>
+        	<select th:field="*{member_gender}">
+				<option value="">Gender</option>
+				<option value="남성">남성</option>
+				<option value="여성">여성</option>
+			</select>
+			</li>
+			<li>
+			<select th:field="*{question}">
+				<option value="">Question</option>
+				<option value="거주지">거주지</option>
+				<option value="별명">별명</option>
+				<option value="장래희망">장래희망</option>
+				<option value="가장 친한친구">가장 친한친구</option>
+			</select>
+			<input type="text" th:field="*{answer}" autocomplete="off" placeholder="Answer">
+			</li>
+			<li><input type="submit" value="Join"></li>
+		</ul>
+	</form>
+	
+</body>
+</html>

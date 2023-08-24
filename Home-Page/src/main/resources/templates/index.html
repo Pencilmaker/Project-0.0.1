@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo Page</title>
+</head>
+<body>
+	<h1>Demo Page</h1>
+	<div th:if="${session.loginMember}">
+		<div>[[${session.loginMember.member_name}]] 님 환영합니다.</div>
+		<a href="http://localhost:9000/logout">로그아웃</a>
+	</div>
+	<div th:unless="${session.loginMember}">
+		<a href="http://localhost:9000/login">로그인</a>
+	</div>
+</body>
+</html>
